@@ -3,19 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HerosComponent } from './heros/heros.component';
-import { HeroinesComponent } from './heroines/heroines.component';
 import {FormsModule} from '@angular/forms'
-
+import {PassengerDashboardModule} from './passenger-dashboard/passenger-dashboard.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HerosComponent,
-    HeroinesComponent
-  
+    HerosComponent
+   
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    //custom module
+    PassengerDashboardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

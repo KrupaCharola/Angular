@@ -1,0 +1,17 @@
+<div> Food Options:{{foodChoice.length}}</div>
+  <div>
+    <li *ngFor="let food of foodChoice; let i= index">
+      <span class="status" [ngClass]="{'is-cold':food.isCold}"></span>
+      {{i}} : {{food.name}}
+    </li>
+  </div><br>
+  <div> Food Options:{{foodChoice.length}}</div>
+  <div>
+    <li *ngFor="let food of foodChoice; let i= index">
+      <span class="status" [ngStyle]="{'backgroundColor':(!food.isCold?'#c0392b':'#2ecc71')}"></span>
+      {{i}} : {{food.name}}
+      Date to Enjoy: {{ food.date? (food.date | date: 'yMMMM' | uppercase): "No Date"}}
+      Any choice : {{food.choices?.length || 0}}
+      <p>{{food | json }}</p>
+    </li>
+  </div>
