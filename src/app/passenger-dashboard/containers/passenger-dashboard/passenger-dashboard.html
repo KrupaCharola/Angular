@@ -1,5 +1,7 @@
 <div> Food Options:{{foodChoice.length}}</div>
   <div>
+    <food-rating></food-rating>
+    <food-name></food-name>
     <li *ngFor="let food of foodChoice; let i= index">
       <span class="status" [ngClass]="{'is-cold':food.isCold}"></span>
       {{i}} : {{food.name}}
