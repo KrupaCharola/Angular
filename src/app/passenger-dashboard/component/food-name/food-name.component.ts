@@ -1,9 +1,20 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { IFoody } from "../../models/passenger-dashboard.interfaces"
 @Component({
-selector:"food-name",
-template:"<div>  Hello From Food Name Component</div>"
+  selector: "food-name",
+  templateUrl: "./food-name.html"
 })
 
-export class FoodNameComponent { 
+export class FoodNameComponent {
+  @Input()
+  items: Array<IFoody>
 
-  } 
+  isColdItems():string[] {
+    if (!this.items) {
+      return;
+    }
+    else {
+      return this.items.filter((foody: IFoody) =>foody.isCold).map(food=>food.name);
+    }
+  }
+} 
