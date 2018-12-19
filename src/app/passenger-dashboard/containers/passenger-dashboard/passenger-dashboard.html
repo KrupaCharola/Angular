@@ -1,6 +1,9 @@
 <div>
-    <food-rating>
+    <food-rating  *ngFor="let food of foodChoice;"
+    [foodObject]="food"
+    (remove)="removeHandler($event)"
+    (edit)="editHandler($event)">
     </food-rating>
     <food-name
-    [items]="foodChoice">
+    [items]="foodChoice">isColdItems()
     </food-name>

@@ -1,1 +1,13 @@
-<h1>Inside Food Rating</h1>
+<div>Please Change the rating: for {{foodObject.name}}</div>
+<div *ngIf="isChanged">
+    <input type="text" 
+    [value]="foodObject.rating"
+    (input)="onChange(name.value)"
+    #name>
+</div>
+<div *ngIf="!isChanged">
+    {{foodObject.rating}}
+</div>
+<button (click)="toggleEdit()">{{isChanged?'Done':'Edit'}}</button> 
+<button (click)="onRemove()">Remove</button>
+

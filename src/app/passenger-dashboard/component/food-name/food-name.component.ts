@@ -14,7 +14,7 @@ export class FoodNameComponent {
       return;
     }
     else {
-      return this.items.filter((foody: IFoody) =>foody.isCold).map(food=>food.name);
+      return this.items.filter((foody: IFoody) =>!foody.isCold).map(food=>food.name);
     }
   }
 } 
