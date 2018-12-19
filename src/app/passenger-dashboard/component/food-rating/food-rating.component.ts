@@ -9,9 +9,9 @@ export class FoodRatingComponent {
     @Input()
     foodObject: IFoody
     @Output()
-    remove: EventEmitter<any> = new EventEmitter()
+    remove = new EventEmitter<IFoody>()
     @Output()
-    edit: EventEmitter<any> = new EventEmitter()
+    edit = new EventEmitter<IFoody>()
     isChanged: boolean
     onChange(value: number) {
         this.foodObject.rating = value;

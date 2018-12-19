@@ -3,10 +3,12 @@ Event Emitting:
 Child component will have functions on actions like edit and Delete 
 Functions will emit the event so Parent can listen to it.
 To emit child will use property with @output decorator to give data back 
-to perent Component
-Child will pass $event in function
+to parent Component.
 
 Parent Component will have a property in Child component declaration for which 
 child declared output event.
-parent Component will declare a fucntion on that property in which it will receive 
+parent Component will declare a function on that property in which it will receive 
 the data that Child sent.
+Parent component will receive $event.
+
+
